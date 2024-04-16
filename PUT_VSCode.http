@@ -1,0 +1,82 @@
+
+@IPAddress = 192.168.1.29
+
+###
+
+
+PUT http://{{IPAddress}}/api/v1/files/sd/
+Accept: */*
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=123456789
+
+--123456789
+Content-Disposition: form-data; name="filename"; filename="autorun.brs"
+Content-Type: application/octet-stream
+
+< ./autorun.brs
+--123456789--
+ 
+
+###
+
+
+PUT http://{{IPAddress}}/api/v1/files/sd/pluginNodeApp
+Accept: */*
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=123456789
+
+--123456789
+Content-Disposition: form-data; name="filename"; filename="bundle.js"
+Content-Type: application/octet-stream
+
+< ./dist/bundle.js
+--123456789--
+ 
+
+###
+
+
+PUT http://{{IPAddress}}/api/v1/files/sd/pluginNodeApp
+Accept: */*
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=123456789
+
+--123456789
+Content-Disposition: form-data; name="filename"; filename="index.html"
+Content-Type: application/octet-stream
+
+< ./index.html
+--123456789--
+ 
+
+###
+
+
+
+PUT http://{{IPAddress}}/api/v1/files/sd/
+Accept: */*
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=123456789
+
+--123456789
+Content-Disposition: form-data; name="filename"; filename="keyboard.zip"
+Content-Type: application/octet-stream
+
+< ./keyboard.zip
+--123456789--
+ 
+
+###
+
+PUT http://{{IPAddress}}/api/v1/control/reboot
+
+
+###
+
+
+
+
